@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="content">
+      <audio id="music" loop="loop">
+        <source src="music/Original Tetris theme (Tetris Soundtrack).mp3" />
+      </audio>
+      <h1>TETRIS</h1>
+      <div class="error">
+        <h1>Error</h1>
+        <p>Sorry, you can play this game on larger devices only</p>
+      </div>
+      <div class="top-bar">  
+        <div class="levels">
+          <h2>Levels:</h2>
+          <span id="easy">Easy</span>
+          <span id="medium">Medium</span>
+          <span id="hard">Hard</span>
+          <span id="extreme">Extreme</span>
+        </div>
+        <div id="hamburger" class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+    </div>
+      <div id="start-modal" class="start-modal">
+        <div class="start-modal-content">
+          <h2>
+            How to play
+          </h2>
+          <div>
+            <img src="imgs/tut.png" alt="">
+           
+          </div>
+          <span id="start-modal-close" class="start-modal-close">X</span>
+        </div>
+      </div>
+      <div id="my-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="modal-result"></h2>
+            <h3>Score: <span id="modal-score">0</span></h3>
+          </div>
+          <div class="modal-body">
+            <button style="color: #59135d !important;font-weight: 600 !important;" class="myButton" onClick="window.location.reload();">
+              Restart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="game-container">
+      <div class="container">
+        <div class="grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+        </div>
+        <div class="wrapper">
+          <h3>Next:</h3>
+          <div class="mini-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="stats">
+            <h3>Score : <span id="score">0</span></h3>
+            <h5>Lines : <span id="lines">0</span></h5>
+          </div>
+          <div class="controls">
+            <div class="all_arrows">
+              <button id="left">&#8592;</button>
+              <div class="up_bot">
+                <button id="up">&#8593;</button>
+                <button id="bot">&#8595;</button>
+              </div>
+              <button id="right">&#8594;</button>
+            </div>
+            <button id="spacebar"></button>
+          </div>
+        </div>
+      </div>
+      <div class="game-controls"> 
+        <button id="start-button" class="myButton"><span>Start / pause</span> </button>
+        <button class="myButton" onClick="window.location.reload();">
+        <span> Restart</span> 
+        </button>
+        <h5>Music:</h5>
+        <div class="music-buttons">
+          <button id="play-music" class="myButton">&#9658;</button>
+          <button id="stop-music" class="myButton">&#9612;&#9612;</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
